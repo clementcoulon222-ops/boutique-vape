@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ma Boutique Vape | Cigarette électronique & CBD</title>
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--tx:#1d2320;--mut:#5f6b65;--ac:#c62828;--ac2:#fdeaea;--bd:#dfe3df;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151212;--card:#221c1c;--tx:#f3eeee;--mut:#a89c9c;--ac:#ff6b6b;--ac2:#331c1c;--bd:#3a2f2f}}
+:root[data-theme="dark"]{--bg:#151212;--card:#221c1c;--tx:#f3eeee;--mut:#a89c9c;--ac:#ff6b6b;--ac2:#331c1c;--bd:#3a2f2f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+.warn{background:var(--tx);color:var(--bg);font-size:.8rem;text-align:center;padding:.4rem 1rem}
+header{background:var(--card);border-bottom:1px solid var(--bd);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.bar{max-width:1050px;margin:auto;padding:.7rem 1rem;display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:1.25rem;color:var(--ac);letter-spacing:.5px}
+nav{display:flex;flex-wrap:wrap;gap:.3rem}
+nav button{background:none;border:0;color:var(--tx);font:inherit;font-size:.92rem;padding:.4rem .75rem;border-radius:99px;cursor:pointer}
+nav button:hover{background:var(--ac2)}
+nav button.on{background:var(--ac);color:#fff}
+nav button.new::after{content:"NEW";font-size:.55rem;margin-left:.35rem;vertical-align:super;background:#e0a100;color:#111;padding:1px 4px;border-radius:4px}
+main{max-width:1050px;margin:auto;padding:1.5rem 1rem 3rem}
+section{display:none}section.on{display:block}
+.hero{background:linear-gradient(135deg,#c62828,#7f1414);color:#fff;border-radius:18px;padding:2.5rem 1.5rem;margin-bottom:1.5rem}
+.hero h1{margin:0 0 .5rem;font-size:clamp(1.6rem,4vw,2.4rem)}
+.hero p{max-width:600px;margin:0 0 1.2rem;opacity:.95}
+.btn{display:inline-block;background:#fff;color:#7f1414;border:0;font:inherit;font-weight:600;padding:.6rem 1.2rem;border-radius:99px;cursor:pointer}
+h2{margin:1.5rem 0 .6rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:1.1rem}
+.card h3{margin:.2rem 0 .3rem;font-size:1.05rem}
+.card p{margin:0;color:var(--mut);font-size:.92rem}
+.ico{font-size:1.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.chips button{border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit;font-size:.88rem;padding:.35rem .9rem;border-radius:99px;cursor:pointer}
+.chips button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.pimg{height:110px;border-radius:10px;background:var(--ac2);display:flex;align-items:center;justify-content:center;font-size:2.6rem;margin-bottom:.7rem}
+.tag{font-size:.72rem;color:var(--ac);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.price{font-weight:700;margin-top:.5rem}
+.two{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+form{display:grid;gap:.7rem;max-width:520px}
+input,textarea{width:100%;font:inherit;padding:.6rem .8rem;border:1px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx)}
+form .btn{background:var(--ac);color:#fff}
+.ok{color:var(--ac);font-weight:600}
+footer{border-top:1px solid var(--bd);text-align:center;color:var(--mut);font-size:.82rem;padding:1.5rem 1rem}
+</style>
+</head>
+<body>
+<div class="warn">⚠️ Vente interdite aux mineurs. Les produits de vapotage peuvent contenir de la nicotine, substance addictive.</div>
+<header><div class="bar">
+<div class="logo">MA BOUTIQUE VAPE</div>
+<nav id="nav">
+<button data-t="accueil" class="on">Accueil</button>
+<button data-t="cigarette">Cigarette électronique</button>
+<button data-t="eliquide">E-liquide &amp; DIY</button>
+<button data-t="cbd">CBD</button>
+<button data-t="produits" class="new">Produits</button>
+<button data-t="contact">Contact</button>
+</nav></div></header>
+
+<main>
+<section id="accueil" class="on">
+<div class="hero">
+<h1>Votre spécialiste cigarette électronique &amp; CBD</h1>
+<p>Conseils personnalisés, large choix et service après-vente réactif, que vous soyez débutant ou vapoteur expérimenté.</p>
+<button class="btn" data-go="produits">Découvrir nos produits</button>
+</div>
+<div class="grid">
+<div class="card"><div class="ico">🛍️</div><h3>Large choix</h3><p>Matériel, e-liquides, accessoires et CBD réunis en boutique.</p></div>
+<div class="card"><div class="ico">💬</div><h3>Conseils</h3><p>Une équipe à l'écoute pour trouver le produit adapté à vos habitudes.</p></div>
+<div class="card"><div class="ico">🔧</div><h3>SAV</h3><p>Un suivi après achat pour l'entretien et les pièces détachées.</p></div>
+<div class="card"><div class="ico">🌿</div><h3>CBD premium</h3><p>Une sélection exigeante, présentée avec pédagogie.</p></div>
+</div>
+<h2>Nos boutiques</h2>
+<div class="two">
+<div class="card"><h3>Boutique 1</h3><p>12 rue Exemple, 31000 Ville<br>00 00 00 00 00<br>Lun–Sam : 9h–19h</p></div>
+<div class="card"><h3>Boutique 2</h3><p>34 avenue Exemple, 31000 Ville<br>00 00 00 00 00<br>Lun–Sam : 9h–19h</p></div>
+</div>
+</section>
+
+<section id="cigarette">
+<h2>Cigarette électronique</h2>
+<p>Des solutions pour tous les profils, du primo-vapoteur au passionné, notamment pour un sevrage tabagique progressif : inhalation indirecte (MTL), directe (DL), pods, kits compacts ou performants.</p>
+<div class="grid">
+<div class="card"><h3>Kits &amp; pods</h3><p>Pour démarrer simplement.</p></div>
+<div class="card"><h3>Box &amp; mods</h3><p>Pour personnaliser sa vape.</p></div>
+<div class="card"><h3>Chichas &amp; pipes électroniques</h3><p>Une alternative originale.</p></div>
+<div class="card"><h3>Pièces détachées</h3><p>Résistances, pyrex, drip tips, accus, chargeurs.</p></div>
+</div></section>
+
+<section id="eliquide">
+<h2>E-liquides &amp; DIY</h2>
+<p>Un large choix de références : fruitées, gourmandes, tabac, avec ou sans sel de nicotine. Pour les amateurs de personnalisation : bases, boosters et arômes concentrés pour créer son propre e-liquide, avec nos conseils de dosage.</p>
+<div class="grid">
+<div class="card"><h3>Fruités</h3><p>Frais, acidulés, exotiques.</p></div>
+<div class="card"><h3>Gourmands</h3><p>Desserts, crèmes, pâtisseries.</p></div>
+<div class="card"><h3>Classiques</h3><p>Saveurs tabac.</p></div>
+<div class="card"><h3>Kit DIY</h3><p>Bases, arômes, boosters, flacons.</p></div>
+</div></section>
+
+<section id="cbd">
+<h2>CBD</h2>
+<p>Une sélection de produits CBD (moins de 0,3 % de THC), présentée avec une approche pédagogique. Les produits ne sont pas destinés aux mineurs ni aux femmes enceintes.</p>
+<div class="grid">
+<div class="card"><h3>E-liquides CBD</h3><p>Pour cigarette électronique.</p></div>
+<div class="card"><h3>Résines &amp; fleurs</h3><p>Différentes variétés.</p></div>
+<div class="card"><h3>Pré-roulés</h3><p>Prêts à l'emploi.</p></div>
+<div class="card"><h3>DIY CBD</h3><p>Pour créer son propre mélange.</p></div>
+</div></section>
+
+<section id="produits">
+<h2>Nos produits</h2>
+<p style="color:var(--mut)">Retrouvez ici ce que nous vendons en boutique. Les produits et prix ci-dessous sont des exemples à remplacer.</p>
+<div class="chips" id="chips"></div>
+<div class="grid" id="plist"></div>
+</section>
+
+<section id="contact">
+<h2>Contactez-nous</h2>
+<div class="two">
+<div>
+<form id="cf">
+<input placeholder="Nom Prénom" required>
+<input type="email" placeholder="Email" required>
+<input placeholder="Téléphone">
+<textarea rows="4" placeholder="Votre message" required></textarea>
+<button class="btn" type="submit">Envoyer</button>
+<div class="ok" id="sent" hidden>Merci, votre message a bien été pris en compte (démo).</div>
+</form></div>
+<div class="card"><h3>Coordonnées</h3><p>12 rue Exemple, 31000 Ville<br>00 00 00 00 00<br>contact@exemple.fr<br>Lun–Sam : 9h–19h</p></div>
+</div></section>
+</main>
+<footer>© Ma Boutique Vape · Mentions légales · Vente interdite aux mineurs · Fumer nuit gravement à la santé</footer>
+
+<script>
+var P=[
+{c:"Cigarette électronique",e:"🔋",n:"Kit pod débutant",d:"Simple, compact, idéal pour démarrer.",p:"à partir de 19,90 €"},
+{c:"Cigarette électronique",e:"⚙️",n:"Box / mod",d:"Puissance réglable pour vapoteur confirmé.",p:"à partir de 39,90 €"},
+{c:"Cigarette électronique",e:"💨",n:"Chicha électronique",d:"Grande autonomie, nombreuses saveurs.",p:"à partir de 24,90 €"},
+{c:"Accessoires",e:"🔩",n:"Résistances",d:"Compatibles avec les principales marques.",p:"à partir de 7,90 €"},
+{c:"Accessoires",e:"🔌",n:"Accus &amp; chargeurs",d:"Pour rester chargé au quotidien.",p:"à partir de 9,90 €"},
+{c:"Accessoires",e:"🧪",n:"Pyrex &amp; drip tips",d:"Pièces d'entretien et de personnalisation.",p:"à partir de 3,90 €"},
+{c:"E-liquides",e:"🍓",n:"E-liquide fruité",d:"Frais, acidulé ou exotique, 10 ml.",p:"à partir de 5,90 €"},
+{c:"E-liquides",e:"🍰",n:"E-liquide gourmand",d:"Crémeux et gourmand, avec ou sans sel de nicotine.",p:"à partir de 5,90 €"},
+{c:"E-liquides",e:"🍂",n:"E-liquide tabac",d:"Saveurs classiques pour la transition.",p:"à partir de 5,90 €"},
+{c:"DIY",e:"🧴",n:"Base &amp; boosters",d:"Bases végétales et boosters de nicotine.",p:"à partir de 4,50 €"},
+{c:"DIY",e:"🌸",n:"Arômes concentrés",d:"Pour créer sa propre recette.",p:"à partir de 4,90 €"},
+{c:"CBD",e:"💧",n:"E-liquide CBD",d:"Pour cigarette électronique.",p:"à partir de 9,90 €"},
+{c:"CBD",e:"🌿",n:"Résine CBD",d:"Sélection de variétés (THC &lt; 0,3 %).",p:"à partir de 6,00 €"},
+{c:"CBD",e:"🚬",n:"Pré-roulés CBD",d:"Prêts à l'emploi.",p:"à partir de 5,00 €"}];
+var cats=["Tous"].concat(P.map(function(x){return x.c}).filter(function(v,i,a){return a.indexOf(v)===i}));
+var cur="Tous";
+function show(t){
+document.querySelectorAll("section").forEach(function(s){s.classList.toggle("on",s.id===t)});
+document.querySelectorAll("#nav button").forEach(function(b){b.classList.toggle("on",b.dataset.t===t)});
+window.scrollTo(0,0)}
+function render(){
+document.getElementById("chips").innerHTML=cats.map(function(c){return '<button data-c="'+c+'" class="'+(c===cur?'on':'')+'">'+c+'</button>'}).join("");
+document.getElementById("plist").innerHTML=P.filter(function(x){return cur==="Tous"||x.c===cur}).map(function(x){
+return '<div class="card"><div class="pimg">'+x.e+'</div><div class="tag">'+x.c+'</div><h3>'+x.n+'</h3><p>'+x.d+'</p><div class="price">'+x.p+'</div></div>'}).join("")}
+document.getElementById("nav").addEventListener("click",function(e){if(e.target.dataset.t)show(e.target.dataset.t)});
+document.querySelectorAll("[data-go]").forEach(function(b){b.addEventListener("click",function(){show(b.dataset.go)})});
+document.getElementById("chips").addEventListener("click",function(e){if(e.target.dataset.c){cur=e.target.dataset.c;render()}});
+document.getElementById("cf").addEventListener("submit",function(e){e.preventDefault();document.getElementById("sent").hidden=false;e.target.reset()});
+render();
+</script>
+</body>
+</html>
